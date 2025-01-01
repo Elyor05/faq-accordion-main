@@ -1,0 +1,97 @@
+@font-face {
+    font-family: "Work Sans";
+    src: url("assets/fonts/WorkSans-VariableFont_wght.ttf");
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+    background-color: hsl(275, 100%, 97%);
+    background-image: url("assets/images/background-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+main {
+    width: 35vw;
+    margin: 10vh auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+#title {
+    display: flex;
+    gap: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    color: hsl(292, 42%, 14%);
+}
+
+.faq {
+    margin: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: hsl(292, 42%, 14%);
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.faq-question:hover {
+    color: #AD28EB;
+}
+
+.faq-answer {
+    display: none;
+    color: hsl(292, 16%, 49%);
+    padding: 10px 0;
+}
+
+.faq.active .faq-answer {
+    display: block;
+}
+
+.faq.active .faq-question {
+    color: #333;
+}
+
+.faq-question:focus {
+    outline: none;
+}
+
+.image:active {
+    background: url("assets/images/icon-minus.svg");
+    z-index: 1;
+}
+@media only screen and (max-width: 768px) {
+    main {
+        width: 70vw;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    body {
+        background-image: url("assets/images/background-pattern-mobile.svg");
+    }
+
+    main {
+        width: 80vw;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .faq-question {
+        font-size: 1rem;
+    }
+}
